@@ -1,21 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input} from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
-import { Myservice } from '../app.service';
+
 
 @Component({
-  selector: 'app-search-bar',
-  templateUrl: './search-bar.component.html',
-  styleUrls: ['./search-bar.component.css'],
-  providers: [Myservice],
-
+  selector: 'app-search-details',
+  templateUrl: './search-details.component.html',
+  styleUrls: ['./search-details.component.css']
 })
-export class SearchBarComponent implements OnInit {
+export class SearchDetailsComponent implements OnInit {
+	@Input() destinationTo:any;
+	@Input() destinationFrom: any;
+
+
+
 	  flag:boolean;
 	  showVal:boolean;
 	  fromFlight: any;
 	  toFlight: any;
-  title: any;
-
+  	title: any;
 	  flightData: any = [
   {
     "From": "Chennai",
@@ -220,17 +222,23 @@ export class SearchBarComponent implements OnInit {
 ]
 
 
-  constructor(private modalService: NgbModal, private _myService: Myservice) {
-      this.flag=false;
+  constructor(private modalService: NgbModal,) {
+  this.flag=false;
       this.showVal=false;
-      this.fromFlight = "Delhi";
-      this.toFlight = "Chennai";
+     }
 
-}
-  closeResult: string;
+ closeResult: string;
 
   ngOnInit() {
-  	console.log(this.flightData[0].To);
+  	console.log("I am in 2nd comp");
+  	console.log(this.destinationFrom);
+    console.log(this.destinationTo);
+  	 this.toFlight = this.destinationTo;
+     this.fromFlight =  this.destinationFrom; 
+  	// console.log(this.destinationTo);
+  	// console.log(this.fromFlight);
+
+
   }
   showPrice(value)
   {

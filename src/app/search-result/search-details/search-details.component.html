@@ -1,36 +1,9 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-<!-- <div class="row navbar">
-    
-    <div class="col-md-1 navbar_text hideDivSmall">
-    </div>
-    <div class="col-md-2 title">
-        <p class="company_title" >
-            AirTraveller.com <i class="fas fa-bars showDivSmall" (click)="showMenu()"></i>
-        </p>
-    </div>
-    <div class="col-md-4 ">
-    </div>
-    <div class="col-md-1 navbar_text hideDivSmall " [ngClass]="{'showDiv': flag==1}">
-        Account
-    </div>
-    <div class="col-md-1 navbar_text hideDivSmall " [ngClass]="{'showDiv': flag==1}">
-        My List <span class="badge badge-danger">04</span>
-    </div>
 
-    <div class="col-md-1 navbar_text hideDivSmall " [ngClass]="{'showDiv': flag==1}">
-        My Trips <i class="fas fa-chevron-down"></i>
-    </div>
-
-    <div class="col-md-1 navbar_text hideDivSmall " [ngClass]="{'showDiv': flag==1}">
-        Support <i class="fas fa-chevron-down"></i>
-    </div>
-    <div class="col-md-1  ">
-        &nbsp;
-    </div>
-</div> -->
 <div style="background-color: #220340">
+	<br>
 	<div class=" container website_details">
 	<div class="row">
 		<div class="col-md-3 sort_filter" >
@@ -163,7 +136,7 @@
 
 			</div>
 				<div class="container ticket_container"  *ngFor="let item of flightData"  >
-			<div *ngIf="item.From==fromFlight && item.To==toFlight " >
+			<div *ngIf="item.From==fromFlight && item.To==toFlight" >
 					<div class="row flight_info text-center">
 					<div class="col-md-1">
 						<img src="https://cdn1.momondo.net/logos/airlines/ai.png">

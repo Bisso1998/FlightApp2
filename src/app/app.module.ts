@@ -12,14 +12,15 @@ import { AppComponent } from './app.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 
-
+import { Myservice } from './app.service';
+import { SearchDetailsComponent } from './search-result/search-details/search-details.component'
 
 
 
 
 @NgModule({
   declarations: [
-    AppComponent, SearchBarComponent, SearchResultComponent
+    AppComponent, SearchBarComponent, SearchResultComponent, SearchDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
     import { RouterModule, Routes } from '@angular/router';
     import { SearchBarComponent } from '../search-bar/search-bar.component';
     import { SearchResultComponent } from '../search-result/search-result.component';
+    import { SearchDetailsComponent } from '../search-result/search-details/search-details.component';
+
 
 
     const routes: Routes = [
@@ -13,6 +15,14 @@ import { NgModule } from '@angular/core';
             path: 'search-result',
             component: SearchBarComponent,
         },
+            {
+            path: 'search-details',
+            component: SearchDetailsComponent,
+        },
+        
+        
+
+
         
     ];
 
