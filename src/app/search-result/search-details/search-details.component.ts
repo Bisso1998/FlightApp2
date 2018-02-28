@@ -1,5 +1,9 @@
 import { Component, OnInit , Input} from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+// import { FilterPipe }from '../filter.pipe';
+import { PersonSearchPipe } from './personSearch.pipe';
+
+import { Ng2OrderModule } from 'ng2-order-pipe';
 
 
 @Component({
@@ -10,9 +14,23 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 export class SearchDetailsComponent implements OnInit {
 	@Input() destinationTo:any;
 	@Input() destinationFrom: any;
+  price:any;
+   order: string;
+   nameSearch : any;
+   searchText : any = "Air India";
+   str1 : any;
+   str2: any;
+filterAirline(str)
+{
+  console.log("Filtering flight by name: " + str);
+  this.nameSearch = str;
+}
+sortList(str)
+{
+  console.log("Sorting by " + str);
+   this.order = str;
 
-
-
+}
 	  flag:boolean;
 	  showVal:boolean;
 	  fromFlight: any;
@@ -255,6 +273,10 @@ open_filter(content) {
     }, (reason) => {
     });
   }  
+  // filterByDuration(str1,str2)
+  // {
+  //   this.
+  // }
 showMenu()
 {
   this.flag=!this.flag;

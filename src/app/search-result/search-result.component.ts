@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {Observable} from 'rxjs/Observable';
@@ -20,7 +19,7 @@ import 'rxjs/add/operator/distinctUntilChanged';
 export class SearchResultComponent implements OnInit {
   states: any;
 
-  flag:boolean;
+  flag:any;
   title: any;
  search = (text$: Observable<string>) =>
     text$

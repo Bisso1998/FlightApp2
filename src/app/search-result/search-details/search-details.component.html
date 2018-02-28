@@ -10,11 +10,11 @@
 			<p class="text sort_by">Sort by: </p>
 
 			<ul class="sort_by_list">
-				<li><input type="radio" name="radiogroup"> Duration</li>
-				<li><input type="radio" name="radiogroup"> Arrival</li>
-				<li><input type="radio" name="radiogroup"> Departure</li>
-				<li><input type="radio" name="radiogroup"> No of seats</li>
-				<li><input type="radio" name="radiogroup"> Airline</li>
+				<li (click)="sortList('Duration')"><input type="radio" name="radiogroup" > Duration</li>
+				<li (click)="sortList('Arrival')"><input type="radio" name="radiogroup"> Arrival</li>
+				<li (click)="sortList('Departure')"><input type="radio" name="radiogroup"> Departure</li>
+<!-- 				<li (click)="sortList(`Seats`)"><input type="radio" name="radiogroup"> No of seats</li>
+ -->				<li (click)="sortList('Price')"><input type="radio" name="radiogroup"> Price</li>
 			</ul>
 			<p class="text sort_by">Filters: </p>
 			<p class="text sort_by">Price Slider </p>
@@ -26,30 +26,30 @@
 			<span *ngIf="showVal" class="range_slider">Price: {{price}} INR</span>
 			<p class="text sort_by">Duration: </p>
 			<ul class="sort_by_list">
-				<li><input type="checkbox" name="radiogroup"> Less than 2 hours</li>
-				<li><input type="checkbox" name="radiogroup"> 2-3 hours</li>
-				<li><input type="checkbox" name="radiogroup"> More than 3 hours</li>
+				<li><input type="checkbox" name="radiogroup" id="duration" > Less than 2 hours</li>
+				<li><input type="checkbox" name="radiogroup" id="duration" > 2-3 hours</li>
+				<li><input type="checkbox" name="radiogroup" id="duration" "> More than 3 hours</li>
 			</ul>
 			<p class="text sort_by">Airline </p>
 			<ul class="sort_by_list">
-				<li><input type="checkbox" name="radiogroup"> AirIndia </li>
-				<li><input type="checkbox" name="radiogroup"> Jet Airways</li>
-				<li><input type="checkbox" name="radiogroup"> Indigo</li>
+				<li><input type="radio" name="radiogroup" id="airline" (click)="filterAirline('Air India')"> AirIndia </li>
+				<li><input type="radio" name="radiogroup" id="airline" (click)="filterAirline('Jet Airways')"> Jet Airways</li>
+				<li><input type="radio" name="radiogroup" id="airline" (click)="filterAirline('Indigo')"> Indigo</li>
 
 			</ul>
 				<p class="text sort_by">Arrival </p>
 			<ul class="sort_by_list">
-				<li><input type="checkbox" name="radiogroup"> Early Morning (00:00-3:59) </li>
-				<li><input type="checkbox" name="radiogroup"> Morning (4:00-11:59)</li>
-				<li><input type="checkbox" name="radiogroup"> Afternoon (12:00-17:59)</li>
-				<li><input type="checkbox" name="radiogroup"> Evening (18:00-11:59)</li>
+				<li><input type="checkbox" name="radiogroup" id="arrv"> Early Morning (00:00-3:59) </li>
+				<li><input type="checkbox" name="radiogroup" id="arrv"> Morning (4:00-11:59)</li>
+				<li><input type="checkbox" name="radiogroup" id="arrv"> Afternoon (12:00-17:59)</li>
+				<li><input type="checkbox" name="radiogroup" id="arrv"> Evening (18:00-11:59)</li>
 			</ul>
 				<p class="text sort_by">Departure </p>
 			<ul class="sort_by_list">
-				<li><input type="checkbox" name="radiogroup"> Early Morning (00:00-3:59) </li>
-				<li><input type="checkbox" name="radiogroup"> Morning (4:00-11:59)</li>
-				<li><input type="checkbox" name="radiogroup"> Afternoon (12:00-17:59)</li>
-				<li><input type="checkbox" name="radiogroup"> Evening (18:00-11:59)</li>
+				<li><input type="checkbox" name="radiogroup" id="dept"> Early Morning (00:00-3:59) </li>
+				<li><input type="checkbox" name="radiogroup" id="dept"> Morning (4:00-11:59)</li>
+				<li><input type="checkbox" name="radiogroup" id="dept"> Afternoon (12:00-17:59)</li>
+				<li><input type="checkbox" name="radiogroup" id="dept"> Evening (18:00-11:59)</li>
 			</ul>
 	
 
@@ -71,12 +71,12 @@
 <div style="background-color: #300257; padding-left: 10px;">
 	  <p class="text sort_by">Sort by: </p>
 
-			<ul class="sort_by_list">
-				<li><input type="radio" name="radiogroup"> Duration</li>
-				<li><input type="radio" name="radiogroup"> Arrival</li>
-				<li><input type="radio" name="radiogroup"> Departure</li>
-				<li><input type="radio" name="radiogroup"> No of seats</li>
-				<li><input type="radio" name="radiogroup"> Airline</li>
+				<ul class="sort_by_list">
+				<li (click)="sortList('Duration')"><input type="radio" name="radiogroup" > Duration</li>
+				<li (click)="sortList('Arrival')"><input type="radio" name="radiogroup"> Arrival</li>
+				<li (click)="sortList('Departure')"><input type="radio" name="radiogroup"> Departure</li>
+<!-- 				<li (click)="sortList(`Seats`)"><input type="radio" name="radiogroup"> No of seats</li>
+ -->				<li (click)="sortList('Price')"><input type="radio" name="radiogroup"> Price</li>
 			</ul>
 			</div>
 			 <button type="button" class="btn btn-info " (click)="c('Close click')">Done</button>
@@ -99,30 +99,30 @@
 			<span *ngIf="showVal" class="range_slider">Price: {{price}} INR</span>
 			<p class="text sort_by">Duration: </p>
 			<ul class="sort_by_list">
-				<li><input type="checkbox" name="radiogroup"> Less than 2 hours</li>
-				<li><input type="checkbox" name="radiogroup"> 2-3 hours</li>
-				<li><input type="checkbox" name="radiogroup"> More than 3 hours</li>
+				<li><input type="checkbox" name="radiogroup" id="duration"> Less than 2 hours</li>
+				<li><input type="checkbox" name="radiogroup" id="duration"> 2-3 hours</li>
+				<li><input type="checkbox" name="radiogroup" id="duration"> More than 3 hours</li>
 			</ul>
 			<p class="text sort_by">Airline </p>
 			<ul class="sort_by_list">
-				<li><input type="checkbox" name="radiogroup"> AirIndia </li>
-				<li><input type="checkbox" name="radiogroup"> Jet Airways</li>
-				<li><input type="checkbox" name="radiogroup"> Indigo</li>
+				<li><input type="checkbox" name="radiogroup" id="airline" (click)="filterAirline('Air India')"> AirIndia </li>
+				<li><input type="checkbox" name="radiogroup" id="airline" (click)="filterAirline('Jet Airways')"> Jet Airways</li>
+				<li><input type="checkbox" name="radiogroup" id="airline" (click)="filterAirline('Indigo')"> Indigo</li>
 
 			</ul>
 				<p class="text sort_by">Arrival </p>
 			<ul class="sort_by_list">
-				<li><input type="checkbox" name="radiogroup"> Early Morning (00:00-3:59) </li>
-				<li><input type="checkbox" name="radiogroup"> Morning (4:00-11:59)</li>
-				<li><input type="checkbox" name="radiogroup"> Afternoon (12:00-17:59)</li>
-				<li><input type="checkbox" name="radiogroup"> Evening (18:00-11:59)</li>
+				<li><input type="checkbox" name="radiogroup" id="arrv"> Early Morning (00:00-3:59) </li>
+				<li><input type="checkbox" name="radiogroup" id="arrv"> Morning (4:00-11:59)</li>
+				<li><input type="checkbox" name="radiogroup" id="arrv"> Afternoon (12:00-17:59)</li>
+				<li><input type="checkbox" name="radiogroup" id="arrv"> Evening (18:00-11:59)</li>
 			</ul>
 				<p class="text sort_by">Departure </p>
 			<ul class="sort_by_list">
-				<li><input type="checkbox" name="radiogroup"> Early Morning (00:00-3:59) </li>
-				<li><input type="checkbox" name="radiogroup"> Morning (4:00-11:59)</li>
-				<li><input type="checkbox" name="radiogroup"> Afternoon (12:00-17:59)</li>
-				<li><input type="checkbox" name="radiogroup"> Evening (18:00-11:59)</li>
+				<li><input type="checkbox" name="radiogroup" id="dept"> Early Morning (00:00-3:59) </li>
+				<li><input type="checkbox" name="radiogroup" id="dept"> Morning (4:00-11:59)</li>
+				<li><input type="checkbox" name="radiogroup" id="dept"> Afternoon (12:00-17:59)</li>
+				<li><input type="checkbox" name="radiogroup" id="dept"> Evening (18:00-11:59)</li>
 			</ul>
 			</div>
 			 <button type="button" class="btn btn-info " (click)="c('Close click')">Done</button>
@@ -135,8 +135,16 @@
 
 
 			</div>
-				<div class="container ticket_container"  *ngFor="let item of flightData"  >
+	<!-- 		<input type="text" name="" [(ngModel)]="nameSearch">
+			<input type="text" name="" [(ngModel)]="emailSearch">
+
+			<input type="text" name="" [(ngModel)]="duration" placeholder="Duration">
+			{{duration}} -->
+			
+		<div class="container ticket_container"  *ngFor="let item of flightData | orderBy: order " >
+			<!-- |  personSearch: nameSearch:price:duration  -->
 			<div *ngIf="item.From==fromFlight && item.To==toFlight" >
+				
 					<div class="row flight_info text-center">
 					<div class="col-md-1">
 						<img src="https://cdn1.momondo.net/logos/airlines/ai.png">
@@ -213,3 +221,6 @@
 </div>
 
 <h1>{{title}}</h1>
+
+
+<!-- http://pastebin.com/v1nF9GUr -->
