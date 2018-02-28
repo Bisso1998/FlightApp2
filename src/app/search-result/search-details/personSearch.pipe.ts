@@ -18,18 +18,15 @@ export class PersonSearchPipe implements PipeTransform {
                 console.log("Val of item.Duration is " + item.Duration);
                 console.log("Val of item.Duration is " + item.Duration);
 
-
-
-
                 if (nameSearch && item.Airline.indexOf(nameSearch) === -1){
                     return false;
                 }
-                if (price && item.Price.indexOf(price) === -1){
-                    return false;
-                }
-                if (duration && item.Duration.indexOf(duration) === -1){
-                    return false;
-                }
+                // if (price && item.Price.indexOf(price) === -1){
+                //     return false;
+                // }
+                // if (duration && item.Duration.indexOf(duration) === -1){
+                //     return false;
+                // }
 
                 // if (emailSearch && item.email.toLowerCase().indexOf(emailSearch.toLowerCase()) === -1){
                 //     return false;

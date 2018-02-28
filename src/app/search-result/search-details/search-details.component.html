@@ -14,7 +14,7 @@
 				<li (click)="sortList('Arrival')"><input type="radio" name="radiogroup"> Arrival</li>
 				<li (click)="sortList('Departure')"><input type="radio" name="radiogroup"> Departure</li>
 <!-- 				<li (click)="sortList(`Seats`)"><input type="radio" name="radiogroup"> No of seats</li>
- -->				<li (click)="sortList('Price')"><input type="radio" name="radiogroup"> Price</li>
+ -->				<li (click)="sortList('Price')"><input type="radio" name="radiogroup"> Price for sort</li>
 			</ul>
 			<p class="text sort_by">Filters: </p>
 			<p class="text sort_by">Price Slider </p>
@@ -28,7 +28,7 @@
 			<ul class="sort_by_list">
 				<li><input type="checkbox" name="radiogroup" id="duration" > Less than 2 hours</li>
 				<li><input type="checkbox" name="radiogroup" id="duration" > 2-3 hours</li>
-				<li><input type="checkbox" name="radiogroup" id="duration" "> More than 3 hours</li>
+				<li><input type="checkbox" name="radiogroup" id="duration" > More than 3 hours</li>
 			</ul>
 			<p class="text sort_by">Airline </p>
 			<ul class="sort_by_list">
@@ -139,9 +139,11 @@
 			<input type="text" name="" [(ngModel)]="emailSearch">
 
 			<input type="text" name="" [(ngModel)]="duration" placeholder="Duration">
+<<<<<<< HEAD
 			{{duration}}-->
 			  
 		<div class="container ticket_container"  *ngFor="let item of flightData | orderBy: order " >
+
 			<!-- |  personSearch: nameSearch:price:duration  -->
 			<div *ngIf="item.From==fromFlight && item.To==toFlight" >
 				
