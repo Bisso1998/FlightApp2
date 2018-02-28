@@ -141,7 +141,7 @@
 			<input type="text" name="" [(ngModel)]="duration" placeholder="Duration">
 			{{duration}} -->
 			
-		<div class="container ticket_container"  *ngFor="let item of flightData |  personSearch: nameSearch  | orderBy: order" >
+		<div class="container ticket_container"  *ngFor="let item of flightData | orderBy: order" >
 			<!-- |  personSearch: nameSearch:price:duration  -->
 			<div *ngIf="item.From==fromFlight && item.To==toFlight" >
 				
