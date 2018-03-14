@@ -1,4 +1,8 @@
-# GameList
+# FlightApp
+
+> See flights from Bangalore to Kolkata, Kolkata to Bangalore and Bangalore to Delhi
+> The data is static
+> Sort given data by price, duration and time.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
